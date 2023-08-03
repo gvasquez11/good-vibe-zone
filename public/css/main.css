@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,6 +12,28 @@ color: #FFFFFF;
 }
 
 h1{
-    text-align: center;
-    padding: 10px 0px;
+ 
+}
+
+.mainContainer, .rightWrapper, .right{
+    display: flex;
+}
+
+.left, .right{
+    height: 100vh;
+    flex-basis: 50%;
+}
+
+.left{
+    background-color: #121212;
+    flex-basis: 55%;
+}
+.right{
+    background-color: #181818;
+    align-items: center;
+    justify-content: center;
+}
+.rightWrapper{
+    flex-direction: column;
+    gap: 20px;
 }
