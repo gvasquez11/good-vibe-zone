@@ -29,22 +29,22 @@
                 <% }) %>
                     <% } %>
         <main class="container">
-            <form>
+            <form action="/signup" method="POST">
                 <div class="mb-3">
                     <label class="form-label">User Name</label>
-                    <input class="form-control" placeholder="peter.pan">
+                    <input class="form-control" name="userName" placeholder="peter.pan">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input class="form-control" placeholder="peter.pan@neverland.com">
+                    <input class="form-control" name="email" placeholder="peter.pan@neverland.com">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input class="form-control" type="password">
+                    <input class="form-control" name="password" type="password">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Confirm Password</label>
-                    <input class="form-control" type="password">
+                    <input class="form-control" name="confirmPassword" type="password">
                 </div>
                 <button type="submit" class="btn btn-outline-secondary btn-lg">Sign Up</button>
             </form>

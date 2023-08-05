@@ -12,7 +12,9 @@ const connectDB = require('./config/database')
 //Importing routes
 const mainRoutes = require('./routes/main')
 
+
 require('dotenv').config({path : "./config/.env"})
+require("./config/passport")(passport);
 
 connectDB()
 
@@ -23,6 +25,8 @@ app.use(express.urlencoded({extended :true}))
 app.use(express.json())
 
 app.use(logger('dev'))
+
+app.use(methodOverride("_method"));
 
 app.use(
     session({
@@ -39,6 +43,7 @@ app.use(passport.session())
 app.use(flash())
 
 app.use('/', mainRoutes)
+
 
 app.listen(process.env.PORT, () => {
     console.log('Server is currently running!')
