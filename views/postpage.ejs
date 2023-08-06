@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/profile.css">
-    <title>Good Vibe Zone - Profile</title>
+    <link rel="stylesheet" href="/css/createPostPage.css">
+    <title>Good Vibe Zone</title>
 </head>
+
 <body>
-    
+
     <nav>
         <section class="navButton">
-            <a href="/post/createPost" class="btn btn-outline-secondary btn-lg">Create Post</a>
+            <a href="/profile" class="btn btn-outline-secondary btn-lg">Home</a>
         </section>
         <section>
             <a href="#" class="btn btn-outline-secondary btn-lg">Feed</a>
@@ -24,6 +26,22 @@
             <a href="/logout" class="btn btn-outline-secondary btn-lg">Sign Out</a>
         </section>
     </nav>
-    <h1 > Welcome, <%= user%> !</h1>
+
+    <main class="container">
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Upload">Create Post</button>
+        </form>
+    </main>
+
+  
 </body>
+
 </html>

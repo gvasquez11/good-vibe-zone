@@ -11,6 +11,7 @@ const connectDB = require('./config/database')
 
 //Importing routes
 const mainRoutes = require('./routes/main')
+const postRoutes = require('./routes/post')
 
 
 require('dotenv').config({path : "./config/.env"})
@@ -43,6 +44,7 @@ app.use(passport.session())
 app.use(flash())
 
 app.use('/', mainRoutes)
+app.use('/post', postRoutes)
 
 
 app.listen(process.env.PORT, () => {
