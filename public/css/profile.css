@@ -30,3 +30,29 @@ nav a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mainContainer{
+    max-width: 60vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid #6c757d;
+}
+
+.divContainer{
+    width: 100%;
+    display: flex;
+}
+
+.innerPostContainer{
+
+}
+
+img{
+    width: 100%;
+}
