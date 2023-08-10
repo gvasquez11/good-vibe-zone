@@ -9,6 +9,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/profile.css">
+    <script src="https://kit.fontawesome.com/d24920b36a.js" crossorigin="anonymous"></script>
     <title>Good Vibe Zone - Profile</title>
 </head>
 <body>
@@ -35,7 +36,8 @@
                         </a>
                         <section class="textContainer">
                             <p><%= posts[i].caption%></p>
-                            <p>Likes: <span>0</span></p>
+                            
+                            <span><%= posts[i].likes %></span></p>
                         </section>
                         <h6>Comments:</h6>
                     </section>

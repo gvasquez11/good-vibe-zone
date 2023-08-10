@@ -8,6 +8,8 @@ const {ensureAuth } = require("../middleware/auth")
 router.get('/createPost', postController.getPostPage)
 router.post('/createPost', upload.single('file'), postController.createPost)
 router.get('/feed', ensureAuth, postController.getFeed)
+router.put('/likePost/:id', postController.likePost)
+// router.get('/:id')
 
 
 module.exports = router

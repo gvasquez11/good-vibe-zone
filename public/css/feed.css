@@ -59,3 +59,23 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+.fa-heart{
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+.fa-heart:hover {
+    cursor: pointer;
+}
+
+.innerRightSide{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
