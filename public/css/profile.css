@@ -37,18 +37,26 @@ h1{
 }
 
 .mainContainer{
-    max-width: 60vw;
+    max-width: 80vw;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     border: 2px solid #6c757d;
 }
 
-.divContainer{
-    width: 100%;
-    display: flex;
-}
-
 img{
     width: 100%;
+}
+
+.postContainer{
+
+    margin: 20px 0;
+    border: 2px solid #6c757d;
+    padding: 5px;
+
+}
+
+.textContainer{
+    display: flex;
+    justify-content: space-between;
 }
