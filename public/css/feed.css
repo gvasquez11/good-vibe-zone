@@ -60,7 +60,7 @@ img {
     justify-content: space-between;
 }
 
-.fa-heart{
+.fa-heart, .fa-trash{
     border: none;
     background: none;
     cursor: pointer;
@@ -70,7 +70,7 @@ img {
 }
 
 
-.fa-heart:hover {
+.fa-heart:hover, .fa-trash:hover{
     cursor: pointer;
 }
 
