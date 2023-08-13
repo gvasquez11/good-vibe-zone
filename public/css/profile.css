@@ -60,3 +60,28 @@ img{
     display: flex;
     justify-content: space-between;
 }
+
+.innerRightSide {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding-right: 10px;
+}
+
+.rightContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.fa-trash {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.fa-trash:hover{
+    cursor: pointer;
+}

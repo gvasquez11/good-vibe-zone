@@ -57,3 +57,20 @@ exports.likePost = async (req,res) => {
         console.log(err)
     }
 }
+
+exports.deletePost = async (req, res) => {
+    try{
+
+    let post = await Post.findById(
+        {_id: req.params.id}
+    )
+    
+    await cloudinary.uploader.destroy(post.cloudinaryId)
+    await Post.remove({_id: req.params.id})
+
+    console.log("Deleted post");
+    res.redirect('/profile')       
+    }catch(err){
+        console.log(err)
+    }
+}

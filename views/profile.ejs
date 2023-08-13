@@ -36,9 +36,20 @@
                         </a>
                         <section class="textContainer">
                             <p><%= posts[i].caption%></p>
+
+                            <section class="rightContainer">
+                                <form action="/post/deletePost/<%= posts[i]._id %>?_method=DELETE" method="POST">
+                                    <button class="fa-solid fa-trash"></button>
+                                
+                                </form>
+                                <section class="innerRightSide">
+                                    <form action=""><i class="fa-regular fa-heart"></i></form>
+                                    <span><%= posts[i].likes %></span>
+                                </section>
+                            </section>
                             
-                            <span><%= posts[i].likes %></span></p>
                         </section>
+
                         <h6>Comments:</h6>
                     </section>
                     <% } %>
