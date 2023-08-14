@@ -30,9 +30,9 @@
     
             <% for(var i=0; i<posts.length; i++) {%>
                 <section class="postContainer">
-                    <a href="/post/<%= posts[i]._id%>">
-                        <img class="img-fluid" src="<%= posts[i].image%>">
-                    </a>
+                        <a href="/post/<%= posts[i]._id%>">
+                            <img class="img-fluid" src="<%= posts[i].image%>">
+                        </a>
                         <section class="textContainer">
                             <p><%= posts[i].caption%></p>
                             
@@ -53,9 +53,33 @@
                             </section>
                             
                         </section>
+                        
+                        <section class="commentsContainer">
+
+                            <form action="/comment/createComment/<%= posts[i]._id%>" method="POST">
+                                <label for="comment" class="form-label">Add Comment</label>
+                                <textarea class="form-control" id="comment" name="comment"></textarea>
+                                <br>
+                                <button type="submit" class="btn btn-outline-secondary">Post Comment</button>
+                            </form>
+
+                        </section>
+                        <br>
                         <h6>Comments:</h6>
+                        
+                        <section>
+                            <%for(let j = 0; j < comments.length; j++){%>
+                                <!-- Whenever you compare ID and such from mongo DB make sure to convert them to STRING!!! It will save you plenty of time. Often times comapring Object Id's can result in a condidiotnal statment to be false even though by logic it is true.  -->
+                                <% if(String(comments[j].postID) == String(posts[i]._id)){%>
+                                    <p>
+                                        <%= comments[j].comment %>
+                                    </p>
+                                <%}%>
+                            <%}%>
+                        </section>
+
                 </section>
-                <% } %>
+            <% } %>
     
         </div>
     </main>

@@ -12,6 +12,7 @@ const connectDB = require('./config/database')
 //Importing routes
 const mainRoutes = require('./routes/main')
 const postRoutes = require('./routes/post')
+const commentRoutes = require('./routes/comment')
 
 
 require('dotenv').config({path : "./config/.env"})
@@ -45,6 +46,7 @@ app.use(flash())
 
 app.use('/', mainRoutes)
 app.use('/post', postRoutes)
+app.use('/comment', commentRoutes)
 
 
 app.listen(process.env.PORT, () => {

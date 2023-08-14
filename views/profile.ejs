@@ -50,6 +50,15 @@
                         </section>
 
                         <h6>Comments:</h6>
+
+                        <% for(var j = 0; j < comments.length; j++){%>
+                            <% if(String(posts[i]._id) == String(comments[j].postID) ){%>
+                                <p>
+                                    <%= comments[j].comment%>
+                                </p>
+                            <%}%>
+                        <%}%>
+
                     </section>
                     <% } %>
           
