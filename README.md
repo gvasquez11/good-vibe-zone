@@ -1,7 +1,5 @@
 # Good Vibe Zone Social Network App
 
-![Good Vibe Zone Logo](link-to-logo)
-
 Welcome to Good Vibe Zone, a vibrant social network application that spreads positivity and connection. With user authentication, image sharing, comments, likes, and more, Good Vibe Zone provides a platform for users to share their moments, connect with friends, and spread good vibes.
 
 ## Video Demo
